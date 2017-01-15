@@ -1,0 +1,37 @@
+// Desktop breakpoint
+$wide:  1440px;
+$wide-min-width : "only screen and (min-width : " + $wide + ")";
+
+$wide-max: $wide - 1;
+$wide-max-width : "only screen and (max-width : " + $wide-max + ")";
+
+// Laptop breakpoint
+$laptop:  1280px;
+$laptop-min-width : "only screen and (min-width : " + $laptop + ")";
+
+$laptop-max: $laptop - 1;
+$laptop-max-width : "only screen and (max-width : " + $laptop-max + ")";
+
+// Tablet breakpoint
+$tablet: 1024px;
+$tablet-min-width : "only screen and (min-width : " + $tablet + ")";
+
+$tablet-max: $tablet - 1;
+$tablet-max-width : "only screen and (max-width : " + $tablet-max + ")";
+
+// tablet range between mobile & tablet resolution
+$tablet-range: "only screen and (min-width : " + $mobile + ") and (max-width : " + $tablet-max + ")";
+
+// Mobile breakpoint
+$mobile: 760px;
+$mobile-min-width : "only screen and (min-width : " + $mobile + ")";
+
+$mobile-max: $mobile - 1;
+$mobile-max-width : "only screen and (max-width : " + $mobile-max + ")";
+
+// Mini mobile breakpoint
+$minimobile: 480px;
+$minimobile-min-width : "only screen and (min-width : " + $minimobile + ")";
+
+$minimobile-max: $minimobile - 1;
+$minimobile-max-width : "only screen and (max-width : " + $minimobile-max + ")";

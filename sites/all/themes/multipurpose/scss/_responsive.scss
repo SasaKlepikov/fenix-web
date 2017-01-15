@@ -1,0 +1,36 @@
+/* All Responsive
+================================================== */
+
+
+/* Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container { max-width: 85%; }
+  .left-content { width: 60%; }
+  .sidebar-container { width: 36%; }
+}
+
+/* Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .container { max-width: 85%; }
+  .left-content { width: 60%; }
+  .sidebar-container { width: 36%; }
+}
+
+
+/* Mobile (Portrait & Landscape)
+================================================== */
+@media #{$tablet-max-width} {
+  .container { max-width: 100%; width: 100%; }
+  .sidebar-container,
+  .left-content { width: 100%; }
+  .sidebar-container {margin-top: 40px; padding-top: 40px; border-top: 10px solid #eee; }
+  .col{ width: 100%; margin-left: 0; margin-bottom: 25px; }
+}
+/* Mobile (Landscape)
+================================================== */
+@media #{$tablet-range} {
+  .sidr { width: 480px; }
+  .sidr.right { right: -480px; }
+}
