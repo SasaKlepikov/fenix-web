@@ -55,6 +55,9 @@ ul.secondary {
 ul.inline, ul.links.inline {
   margin-left: 0; }
 
+body {
+  min-width: 480px; }
+
 #wrap {
   margin: 0;
   padding: 0;
@@ -66,8 +69,9 @@ ul.inline, ul.links.inline {
     #wrap #main #primary {
       text-align: left;
       display: block;
-      max-width: 1280px;
       width: 100%;
+      max-width: 1280px;
+      padding: 40px 0;
       margin: 0 auto; }
       #wrap #main #primary #content a {
         color: #fe0002; }
@@ -79,12 +83,67 @@ ul.inline, ul.links.inline {
         #wrap #main #primary #content .tabs-wrapper a:hover, #wrap #main #primary #content .tabs-wrapper a.active {
           color: #fff;
           text-decoration: none; }
+      #wrap #main #primary #content ul.action-links {
+        margin-left: 0; }
+        #wrap #main #primary #content ul.action-links li {
+          display: inline-block;
+          list-style: none;
+          margin-bottom: 5px; }
+          #wrap #main #primary #content ul.action-links li a {
+            border: solid 1px #fe0002;
+            background: none;
+            background-color: #fe0002;
+            color: #fff;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -o-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            border-radius: 3px;
+            padding: 8px 15px;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            -o-box-shadow: none;
+            box-shadow: none;
+            text-shadow: none;
+            box-sizing: border-box;
+            width: 100%;
+            display: block; }
+            #wrap #main #primary #content ul.action-links li a:hover {
+              background-color: #fff;
+              color: #1a1a18;
+              text-decoration: none; }
+        @media only screen and (max-width: 680px) {
+          #wrap #main #primary #content ul.action-links {
+            font-size: 0;
+            text-align: center; }
+            #wrap #main #primary #content ul.action-links li {
+              min-width: 47%;
+              margin-left: 1%;
+              margin-right: 1%;
+              font-size: 14px;
+              margin-bottom: 10px; } }
+        @media only screen and (max-width: 480px) {
+          #wrap #main #primary #content ul.action-links li {
+            min-width: 98%; } }
+
+body.front #wrap #main #primary #content #content-wrap h1.page-title {
+  display: none; }
 
 .clearfix {
   display: block;
   width: 100%;
   height: 0;
   clear: both; }
+
+a.more-button {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: #fe0002;
+  color: #fff; }
+  a.more-button:hover {
+    color: #1a1a18; }
 
 /*
 www.devsaran.com
@@ -711,11 +770,6 @@ html[xmlns] .slides {
   background: #02aace;
   color: #fff;
   text-decoration: none; }
-
-/* Homepage
-================================================== */
-#homepage-slider-wrap {
-  margin: -40px -30px 30px; }
 
 #breadcrumbs {
   font-size: 11px;
@@ -2765,9 +2819,7 @@ ul.inline li {
   z-index: 999;
   padding: 15px 0;
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.9);
   -webkit-transition: all 0.5s;
-  /* Safari */
   transition: all 0.5s; }
   #header-wrap #header-wrap-inner {
     padding: 0 10px; }
@@ -2823,6 +2875,7 @@ ul.inline li {
           font-weight: 600;
           position: relative;
           z-index: 9;
+          white-space: nowrap;
           text-decoration: none !important; }
           @media only screen and (min-width: 1024px) {
             #header-wrap #header-wrap-inner #header #site-navigation-wrap #navigation-toggle {
@@ -2940,6 +2993,7 @@ ul.inline li {
                 background: #fe0002;
                 color: #1a1a18; }
   #header-wrap.floating-block-active {
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px 0; }
     #header-wrap.floating-block-active #header-wrap-inner #header #site-info #site-logo {
       width: 50px;
@@ -3012,9 +3066,167 @@ body.admin-menu #header-wrap.floating-block-active {
   color: #fff;
   margin: 0; }
 
+#preface-wrap #preface {
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto; }
+  #preface-wrap #preface .preface-wrap-inner {
+    padding: 0 10px; }
+    #preface-wrap #preface .preface-wrap-inner .easy-breadcrumb {
+      font-size: 13px; }
+      #preface-wrap #preface .preface-wrap-inner .easy-breadcrumb a {
+        color: #fe0002; }
+
+#homepage-slider-wrap {
+  margin: 0 0 30px; }
+  #homepage-slider-wrap #homepage-slider {
+    position: relative; }
+
+.front-page-header {
+  background-color: #000;
+  text-align: center;
+  width: 100%; }
+  @media only screen and (min-width: 680px) {
+    .front-page-header {
+      height: 550px; } }
+  @media only screen and (max-width: 679px) {
+    .front-page-header {
+      height: 350px; } }
+  .front-page-header .front-page-header-inner {
+    display: block;
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media only screen and (min-width: 680px) {
+      .front-page-header .front-page-header-inner {
+        background-image: url("../images/front-page-header-1.jpg"); } }
+    @media only screen and (max-width: 679px) {
+      .front-page-header .front-page-header-inner {
+        background-image: url("../images/front-page-header-2.jpg"); } }
+    .front-page-header .front-page-header-inner .front-page-header-wrapper {
+      display: block; }
+      @media only screen and (min-width: 680px) {
+        .front-page-header .front-page-header-inner .front-page-header-wrapper {
+          text-align: center; } }
+      @media only screen and (max-width: 679px) {
+        .front-page-header .front-page-header-inner .front-page-header-wrapper {
+          text-align: right; } }
+      .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner {
+        display: inline-block;
+        text-align: center; }
+        .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h1, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h3,
+        .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button {
+          margin: 0;
+          color: #fff; }
+          .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h1 a, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2 a, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h3 a,
+          .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button a {
+            color: #fff; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h1 a:hover, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2 a:hover, .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h3 a:hover,
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button a:hover {
+              color: #1a1a18; }
+        .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2 {
+          color: #fe0002; }
+        .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button {
+          background-color: #fe0002;
+          padding: 15px 25px;
+          display: inline-block;
+          border-radius: 30px;
+          font-size: 16px; }
+        @media only screen and (min-width: 680px) {
+          .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner {
+            margin-left: 10%; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h1 {
+              font-size: 70px;
+              margin-top: 30px;
+              text-align: left; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2 {
+              font-size: 34px;
+              text-indent: 100px;
+              margin-bottom: 10px;
+              text-align: left; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h3 {
+              font-size: 24px;
+              text-indent: 70px;
+              text-align: left; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button {
+              margin-top: 150px;
+              margin-right: 20%; } }
+        @media only screen and (max-width: 679px) {
+          .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner {
+            margin-right: 20px; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h1 {
+              font-size: 50px; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h2 {
+              font-size: 30px;
+              margin-bottom: 10px; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner h3 {
+              font-size: 20px; }
+            .front-page-header .front-page-header-inner .front-page-header-wrapper .front-page-header-wrapper-inner .front-page-header-wrapper-inner-button {
+              margin-top: 40px; } }
+
+.front-page-about-us {
+  background-color: #F5F5F5;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%; }
+  .front-page-about-us .front-page-about-us-inner {
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto; }
+    .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-header {
+      margin-bottom: 30px; }
+      .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-header h2 {
+        font-size: 40px;
+        color: #1a1a18;
+        font-weight: 600; }
+      .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-header .content {
+        font-size: 20px; }
+    .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols {
+      vertical-align: top; }
+      .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col {
+        width: 300px;
+        min-height: 410px;
+        background-color: #fff;
+        border-radius: 4px;
+        border: solid 1px #e3e3e3;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px 30px; }
+        .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col .front-page-about-us-inner-icon {
+          display: block;
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 20px;
+          background-color: #fe0002;
+          border-radius: 100%;
+          text-align: center;
+          color: #fff;
+          font-size: 37px;
+          line-height: 120px; }
+          .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col .front-page-about-us-inner-icon img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80px;
+            height: auto; }
+          .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col .front-page-about-us-inner-icon a {
+            color: #fff;
+            display: block;
+            vertical-align: middle; }
+            .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col .front-page-about-us-inner-icon a:hover {
+              color: #fff; }
+        .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col .front-page-about-us-inner-col-inner {
+          display: block;
+          padding: 40px 30px 30px; }
+      .front-page-about-us .front-page-about-us-inner .front-page-about-us-inner-cols .front-page-about-us-inner-col-1 .front-page-about-us-inner-icon {
+        font-size: 0; }
+
 #footer-wrap {
   background-color: #1a1a18;
-  margin-top: 40px;
+  margin: 0;
   padding: 30px 10px; }
   #footer-wrap #footer {
     display: block;
@@ -3180,7 +3392,7 @@ body.admin-menu #header-wrap.floating-block-active {
     margin-bottom: 25px; } }
 /* Mobile (Landscape)
 ================================================== */
-@media only screen and (min-width: 760px) and (max-width: 1023px) {
+@media only screen and (min-width: 680px) and (max-width: 1023px) {
   .sidr {
     width: 480px; }
 

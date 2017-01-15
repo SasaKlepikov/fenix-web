@@ -1,3 +1,6 @@
+body {
+  min-width: $minimobile;
+}
 #wrap {
   margin: 0;
   padding: 0;
@@ -9,8 +12,9 @@
     #primary {
       text-align: left;
       display: block;
-      max-width: $laptop;
       width: 100%;
+      max-width: $laptop;
+      padding: 40px 0;
       margin: 0 auto;
       #content {
         a {
@@ -29,6 +33,71 @@
             }
           }
         }
+        ul.action-links {
+          margin-left: 0;
+          li {
+            display: inline-block;
+            list-style: none;
+            margin-bottom: 5px;
+            a {
+              border: solid 1px $red;
+              background: none;
+              background-color: $red;
+              color: #fff;
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              -o-border-radius: 3px;
+              -ms-border-radius: 3px;
+              -khtml-border-radius: 3px;
+              border-radius: 3px;
+              padding: 8px 15px;
+              -moz-box-shadow: none;
+              -webkit-box-shadow: none;
+              -o-box-shadow: none;
+              box-shadow: none;
+              text-shadow: none;
+              box-sizing: border-box;
+              width: 100%;
+              display: block;
+              &:hover {
+                background-color: #fff;
+                color: $dark-gray;
+                text-decoration: none;
+              }
+            }
+          }
+          @media only screen and (max-width: 680px) {
+            font-size: 0;
+            text-align: center;
+            li {
+              min-width: 47%;
+              margin-left: 1%;
+              margin-right: 1%;
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+          @media only screen and (max-width: 480px) {
+            li {
+              min-width: 98%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.front {
+  #wrap {
+    #main {
+      #primary {
+        #content {
+          #content-wrap {
+            h1.page-title {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -38,4 +107,15 @@
   width: 100%;
   height: 0;
   clear: both;
+}
+
+a.more-button {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: $red;
+  color: #fff;
+  &:hover {
+    color: $dark-gray;
+  }
 }

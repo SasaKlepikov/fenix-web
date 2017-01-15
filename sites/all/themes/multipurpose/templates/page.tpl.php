@@ -68,6 +68,71 @@
         </div>
       </div>
     <?php endif; ?>
+
+    <div class="front-page-header">
+      <div class="front-page-header-inner">
+        <div class="front-page-header-wrapper">
+          <div class="front-page-header-wrapper-inner">
+            <h1>TKD Fénix</h1>
+            <h2>Začni s námi cvičit!</h2>
+            <h3>První 2 týdny zcela zdarma</h3>
+            <div class="front-page-header-wrapper-inner-button"><a href="/chci-zacit">Jdu do toho!</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="front-page-about-us">
+      <div class="front-page-about-us-inner">
+        <div class="front-page-about-us-inner-header">
+          <?php
+          $block = block_load('block', '14');
+          $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+          print drupal_render($output);
+          ?>
+        </div>
+        <div class="front-page-about-us-inner-cols">
+          <div class="front-page-about-us-inner-col front-page-about-us-inner-col-1">
+            <div class="front-page-about-us-inner-col-inner">
+              <div class="front-page-about-us-inner-icon">
+                <a href="#co-je-tkd">
+                  <img src="<?php print base_path() . drupal_get_path('theme', 'multipurpose') . '/images/tkd-icon.svg'; ?>">
+                </a>
+              </div>
+              <?php
+              $block = block_load('block', '3');
+              $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+              print drupal_render($output);
+              ?>
+            </div>
+          </div>
+          <div class="front-page-about-us-inner-col front-page-about-us-inner-col-2">
+            <div class="front-page-about-us-inner-col-inner">
+              <div class="front-page-about-us-inner-icon">
+                <a href="#proc-trenovat-s-nami"><i class="fa fa-shield"></i></a>
+              </div>
+              <?php
+              $block = block_load('block', '4');
+              $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+              print drupal_render($output);
+              ?>
+            </div>
+          </div>
+          <div class="front-page-about-us-inner-col front-page-about-us-inner-col-3">
+            <div class="front-page-about-us-inner-col-inner">
+              <div class="front-page-about-us-inner-icon">
+                <a href="/chci-zacit"><i class="fa fa-question"></i></a>
+              </div>
+              <?php
+              $block = block_load('block', '5');
+              $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+              print drupal_render($output);
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <?php endif; ?>
 
 
@@ -88,7 +153,7 @@
           </div>
         <?php endif; ?>
         <?php if ($page['header']): ?>
-          <div class="span_1_of_1 col col-1">
+          <div class="preface-wrap-inner">
             <?php print render($page['header']); ?>
           </div>
         <?php endif; ?>

@@ -1,0 +1,16 @@
+#preface-wrap {
+  #preface {
+    display: block;
+    max-width: $laptop;
+    margin: 0 auto;
+    .preface-wrap-inner {
+      padding: 0 10px;
+      .easy-breadcrumb {
+        font-size: 13px;
+        a {
+          color: $red;
+        }
+      }
+    }
+  }
+}

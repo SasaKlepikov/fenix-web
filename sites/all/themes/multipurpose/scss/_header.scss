@@ -4,8 +4,7 @@
   z-index: 999;
   padding: 15px 0;
   background-color: #000;
-  background-color: rgba(#000000,0.9);
-  -webkit-transition: all 0.5s; /* Safari */
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   #header-wrap-inner {
     padding: 0 10px;
@@ -68,6 +67,7 @@
           font-weight: 600;
           position: relative;
           z-index: 9;
+          white-space: nowrap;
           text-decoration: none !important;
           @media #{$tablet-min-width} {
             display: none;
@@ -215,6 +215,7 @@
     }
   }
   &.floating-block-active {
+    background-color: rgba(#000000,0.9);
     padding: 10px 0;
     #header-wrap-inner {
       #header {

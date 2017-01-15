@@ -19,15 +19,15 @@ $tablet-min-width : "only screen and (min-width : " + $tablet + ")";
 $tablet-max: $tablet - 1;
 $tablet-max-width : "only screen and (max-width : " + $tablet-max + ")";
 
-// tablet range between mobile & tablet resolution
-$tablet-range: "only screen and (min-width : " + $mobile + ") and (max-width : " + $tablet-max + ")";
-
 // Mobile breakpoint
-$mobile: 760px;
+$mobile: 680px;
 $mobile-min-width : "only screen and (min-width : " + $mobile + ")";
 
 $mobile-max: $mobile - 1;
 $mobile-max-width : "only screen and (max-width : " + $mobile-max + ")";
+
+// tablet range between mobile & tablet resolution
+$tablet-range: "only screen and (min-width : " + $mobile + ") and (max-width : " + $tablet-max + ")";
 
 // Mini mobile breakpoint
 $minimobile: 480px;
