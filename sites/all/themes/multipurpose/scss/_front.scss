@@ -101,6 +101,20 @@
             margin-top: 40px;
           }
         }
+        @media #{$minimobile-max-width} {
+          h1 {
+            font-size: 46px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+          h3 {
+            font-size: 16px;
+          }
+          .front-page-header-wrapper-inner-button {
+            margin-left: 30px;
+          }
+        }
       }
     }
   }

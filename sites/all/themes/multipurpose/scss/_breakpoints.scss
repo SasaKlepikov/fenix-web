@@ -1,3 +1,5 @@
+$ultrawide: 1920px;
+
 // Desktop breakpoint
 $wide:  1440px;
 $wide-min-width : "only screen and (min-width : " + $wide + ")";
@@ -35,3 +37,5 @@ $minimobile-min-width : "only screen and (min-width : " + $minimobile + ")";
 
 $minimobile-max: $minimobile - 1;
 $minimobile-max-width : "only screen and (max-width : " + $minimobile-max + ")";
+
+$tinymobile: 360px;

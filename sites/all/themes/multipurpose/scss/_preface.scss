@@ -1,14 +1,23 @@
 #preface-wrap {
+  background-color: $ultralight-gray;
+  border-bottom: solid 1px $light-gray;
   #preface {
     display: block;
     max-width: $laptop;
     margin: 0 auto;
+    .block {
+      margin-bottom: 0;
+    }
     .preface-wrap-inner {
       padding: 0 10px;
       .easy-breadcrumb {
-        font-size: 13px;
+        font-size: 14px;
         a {
-          color: $red;
+          color: $linkColor;
+          &:hover {
+            color: $dark-gray;
+            text-decoration: underline;
+          }
         }
       }
     }

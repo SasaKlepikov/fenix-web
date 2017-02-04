@@ -1,5 +1,5 @@
 body {
-  min-width: $minimobile;
+  min-width: $tinymobile;
 }
 #wrap {
   margin: 0;
@@ -7,18 +7,27 @@ body {
   width: 100%;
   background-color: $bg-default;
   #main {
+    min-height: calc(100vh - 427px);
+    padding: 0 2em;
     display: block;
     text-align: center;
     #primary {
       text-align: left;
       display: block;
       width: 100%;
-      max-width: $laptop;
+      max-width: $tablet;
       padding: 40px 0;
       margin: 0 auto;
       #content {
+        h2 {
+          font-size: 26px;
+        }
+        h2,h3,h4,h5,h6 {
+          color: $gray;
+          font-weight: 600;
+        }
         a {
-          color: $red;
+          color: $linkColor;
           &:hover {
             color: $dark-gray;
             text-decoration: underline;
@@ -99,6 +108,13 @@ body.front {
           }
         }
       }
+    }
+  }
+}
+body.admin-menu {
+  #wrap {
+    #main {
+      min-height: calc(100vh - 456px);
     }
   }
 }
